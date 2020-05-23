@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Connecting to the NEAR platform</title>
+		<!-- to connect to the NEAR platform, include a reference to near-api-js -->
+		<script src="https://cdn.jsdelivr.net/npm/near-api-js@0.23.2/dist/near-api-js.min.js"></script>
+		<script>
+		  // configure network settings and key storage
+		  const config = {
+			networkId: "default", // this can be any label to namespace user accounts
+			nodeUrl: "https://rpc.testnet.near.org", // this endpoint must point to the network you want to reach
+			walletUrl: "http://wallet.testnet.near.org", // this endpoint must exist for the wallet to work
+			deps: {
+			  keyStore: new nearApi.keyStores.BrowserLocalStorageKeyStore(), // keys are stored as plaintext in LocalStorage
+			},
+		  };
+	
+		  // open a connection to the NEAR platform
+		  (async function () {
+			window.near = await nearApi.connect(config); // connect to the NEAR platform
+			window.wallet = new nearApi.WalletAccount(window.near); // instantiate a new wallet
+	
+			// ---------------------------------------------------------------------------
+			// here you have access to `near-api-js` and a valid connection object `near`
+			//
+			// we've added them to the window object to make working in the console convenient
+			// ---------------------------------------------------------------------------
+		  })(window);
+		</script>
+	  </head>
+<head>
+	<title>Login V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Welcome to Chatterbox
+					</span>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect"></div>
+	
+	<script src="js/main.js"></script>
+	
+	<img src='images/bg-02.png' alt="Logo" width="500" height="600">
+
+</body>
+</html>

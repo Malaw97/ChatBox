@@ -1,6 +1,7 @@
 ChatterBox
 ==========
-Entered into the University of Washington Blockchain Hackathon
+University of Washington Blockchain Hackathon-1st Place Winner
+
 [Devpost Link](https://devpost.com/software/chat-near-free)
 
 

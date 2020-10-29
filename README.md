@@ -1,5 +1,8 @@
-Guest Book
+ChatterBox
 ==========
+Entered into the University of Washington Blockchain Hackathon
+[Devpost Link](https://devpost.com/software/chat-near-free)
+
 
 [![Build Status](https://travis-ci.com/near-examples/guest-book.svg?branch=master)](https://travis-ci.com/near-examples/guest-book)
 
